@@ -1,5 +1,7 @@
 // Code your solution here
 
+// const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'bobby'];
+
 const drivers = [
 //These are the objects matching names and hometown
     {
@@ -28,7 +30,15 @@ const findMatching = (drivers, property) =>  {
   const fuzzyMatch = (drivers, property) => {
     return drivers.filter(function (driver) { return driver.toLowerCase().substring(0, property.length) === property.toLowerCase() })
   }
+// This is an alternative function
+//   function matchName(drivers, myMatchName){
+//     const filteredrray = drivers.filter(function(list){   
+//         return list.name === myMatchName;
+//     })
+//         return filteredrray;
+// }
   
   const matchName = (drivers, myMatchName) => {
     return drivers.filter(function (driver) { return driver.name === myMatchName })
   }
+  
